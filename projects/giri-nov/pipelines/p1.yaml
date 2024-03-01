@@ -4,6 +4,7 @@ metadata:
   name: p1
   project: giri-nov
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
@@ -17,3 +18,11 @@ spec:
       systemToGitSync: true
     name: v1
     type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: giri-qc-feb
+        revision: main
+    name: v1
+    type: Webhook
