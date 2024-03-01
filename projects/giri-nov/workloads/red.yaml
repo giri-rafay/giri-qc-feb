@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: red
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: redis
+      chartVersion: 18.17.0
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: feb291
+  placement:
+    selector: rafay.dev/clusterName=giri-feb28-az1
+  version: red-v1-202402281125290000

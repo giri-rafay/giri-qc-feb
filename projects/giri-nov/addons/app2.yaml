@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: app2
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/app2/http-sw-app.yaml
+    type: Yaml
+  namespace: cilium-test
+  sharing: {}
+  version: v1

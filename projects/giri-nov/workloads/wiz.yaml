@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wiz
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/wiz/wiz.yaml
+    type: Yaml
+  namespace: feb291
+  placement:
+    selector: rafay.dev/clusterName=giri-feb28-az1
+  version: wiz-v1-202402281128430000

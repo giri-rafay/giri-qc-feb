@@ -1,0 +1,14 @@
+apiVersion: system.k8smgmt.io/v3
+kind: Project
+metadata:
+  name: giri-nov
+spec:
+  driftWebhook:
+    enabled: true
+  syncExcludedNamespaces:
+  - namespace1
+  - namespace2
+  - b1
+  - feb29
+  - feb28
+  - feb30

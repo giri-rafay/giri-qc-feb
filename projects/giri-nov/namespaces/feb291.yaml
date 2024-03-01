@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  labels:
+    k8smgmt.io/nsID: k5oj8w2
+    k8smgmt.io/project: giri-nov
+    kubernetes.io/metadata.name: feb291
+  name: feb291
+  project: giri-nov
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-feb28-az1

@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: gb-1
+  project: giri-nov
+spec:
+  base:
+    name: default
+    version: 2.4.0
+  customAddons:
+  - name: alertman-custom
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook:
+    enabled: true
+  type: golden
+  version: v1

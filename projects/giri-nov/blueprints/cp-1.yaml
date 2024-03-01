@@ -1,0 +1,9 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: cp-1
+  project: giri-nov
+spec:
+  driftWebhook:
+    enabled: true
+  type: custom

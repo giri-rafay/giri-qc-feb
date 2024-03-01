@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  description: desc
+  name: app1
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/app1/http-sw-app.yaml
+    type: Yaml
+  namespace: abc
+  sharing: {}
+  version: v3

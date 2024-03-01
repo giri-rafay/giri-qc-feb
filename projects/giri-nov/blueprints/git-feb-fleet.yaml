@@ -1,0 +1,34 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: git-feb-fleet
+  project: giri-nov
+spec:
+  base:
+    name: default-aks
+    version: 2.4.0
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1706633594
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  placement:
+    fleetValues:
+    - feb1
+  type: custom
+  version: version2

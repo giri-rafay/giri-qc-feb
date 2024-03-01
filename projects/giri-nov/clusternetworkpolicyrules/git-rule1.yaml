@@ -1,0 +1,15 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: git-rule1
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: ccnp.yaml
+      repository: giri-np
+      revision: main
+    options: {}
+    type: Yaml
+  version: v1

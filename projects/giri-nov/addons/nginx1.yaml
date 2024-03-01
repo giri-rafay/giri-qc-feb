@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: nginx1
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/nginx1/nginx-15.4.2.tgz
+      valuesPaths:
+      - name: file://artifacts/nginx1/values.yaml
+    type: Helm
+  namespace: nginx-gb
+  sharing: {}
+  version: v1

@@ -1,0 +1,44 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  description: v1-test
+  name: feb-gb1
+  project: giri-nov
+spec:
+  base:
+    name: default-aks
+    version: 2.4.0
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1706633594
+  customAddons:
+  - name: nginx1
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  networkPolicy:
+    policies:
+    - name: pol10
+      version: v1
+    - name: pol9
+      version: v1
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  type: golden
+  version: version1

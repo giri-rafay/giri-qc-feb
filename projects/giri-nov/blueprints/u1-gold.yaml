@@ -1,0 +1,31 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: u1-gold
+  project: giri-nov
+spec:
+  base:
+    name: default-aks
+    version: 2.5.0
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1709108241
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Managed
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  type: golden
+  version: v2-managed

@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: cp1
+  project: giri-nov
+spec:
+  rules:
+  - name: dec28-cr
+    version: cr-v1
+  version: v1
