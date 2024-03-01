@@ -6,6 +6,7 @@ spec:
   driftWebhook:
     enabled: true
   syncExcludedNamespaces:
+  - git
   - namespace1
   - namespace2
   - b1
