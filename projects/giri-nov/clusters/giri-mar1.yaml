@@ -7,7 +7,8 @@ metadata:
   project: giri-nov
 spec:
   blueprintConfig:
-    name: minimal
+    name: u1-gold
+    version: v3
   cloudCredentials: giri-aks
   config:
     kind: aksClusterConfig

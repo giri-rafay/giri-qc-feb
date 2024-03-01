@@ -23,9 +23,16 @@ spec:
   namespaceConfig:
     enableSync: true
     syncType: Managed
+  networkPolicy:
+    policies:
+    - name: cp1
+      version: v1
+    profile:
+      name: default
+      version: latest
   opaPolicy:
     profile:
       name: default
       version: latest
   type: golden
-  version: v2-managed
+  version: v3
