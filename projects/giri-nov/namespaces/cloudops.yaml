@@ -1,0 +1,38 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    logging: enabled
+    meta.helm.sh/release-name: namespace-k356wvm-cloudops
+    meta.helm.sh/release-namespace: cloudops
+    rafay.dev/description: ""
+    rep-drift-action: deny
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    env: prod
+    k8smgmt.io/project: giri-nov
+    k8smgmt.io/update-time: "1709278266590065033"
+    kubernetes.io/metadata.name: cloudops
+    name: cloudops
+    rep-cluster: m1748ym
+    rep-cluster-name: giri-mar1
+    rep-drift-reconcillation: enabled
+    rep-organization: 7w2lnkp
+    rep-partner: rx28oml
+    rep-placement: 2q88392
+    rep-project: kr993wk
+    rep-project-name: giri-nov
+    rep-system-managed: "true"
+    rep-workload: namespace-k356wvm-cloudops
+    rep-workloadid: dk6wxnm
+  name: cloudops
+  project: giri-nov
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mar1
